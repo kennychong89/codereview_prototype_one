@@ -1,0 +1,32 @@
+//- Need to reorganize the files
+extends ../layout
+
+block content
+	div(id='main')
+		div(class='container')
+			h3 #{title}
+			//- h2 #{roomID}
+			div(class='row')
+				div(class='col-md-9')
+					div(class='summary')
+						p #{summary}
+					form(role='form' id='editor-form')
+						//- this will be the editor
+						textarea(class='form-control editor' id='editor' rows='30')
+				div(class='col-md-3')
+					div(class='chatbox')
+						ul(id='messages')
+							//- messages will go here
+							li Welcome to the chatroom!
+						form(form='form' id='send-form')
+							input(type='text' class='form-control' id='send-message' placeholder='Text input')
+
+block other_scripts
+	script.
+		roomNumber = "#{roomID}";
+	script(src='/socket.io/socket.io.js')
+	script(src='/javascripts/chat.js')
+	script(src='/javascripts/chat_client.js')
+	script(src='/javascripts/editor_client.js')
+		
+		

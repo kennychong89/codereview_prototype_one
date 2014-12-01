@@ -1,0 +1,16 @@
+//- index.jade
+extends ./layout.jade
+
+block content
+	div(id='main')
+		div(class='container')
+			//- if user is logged in, provide a button to create a room
+			if loggedin
+					form(role='form' action='createroom')
+						button(type='submit' class='btn btn-default') Create Room
+			h2 Today's Discussions
+			//- dummy data, replace later
+			ol
+				//- something gotta update here
+				- for (var i = 0; i < roomsinfo.length; i++)
+					li <a href='rooms/#{roomsinfo[i]._id}/#{roomsinfo[i].rmURLPathTitle}'>#{roomsinfo[i].roomtitle}</a> Host: #{roomsinfo[i].username}

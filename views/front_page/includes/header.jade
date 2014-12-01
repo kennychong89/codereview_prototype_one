@@ -1,0 +1,21 @@
+//- includes our site navigation and others
+
+nav(class='navbar navbar-inverse navbar-static-top' role='navigation')
+		div(class='container')
+			div(class='navbar-header')
+				button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar')
+					span(class='sr-only') Toggler navigation
+					span(class='icon-bar')
+					span(class='icon-bar')
+					span(class='icon-bar')
+				a(class='navbar-brand' href='/') &ltCodeReview.com&gt
+			div(id='navbar' class='collapse navbar-collapse')
+				ul(class='nav navbar-nav')
+					if loggedin			
+						li.login You are logged in as <a href='#' id='login_name'>#{username}</a> 
+						li: a(href='/logout') Log out
+					else
+						li: a(href='signin') Sign In
+						li: a(href='register') Register
+					
+					li: a(href='#') Help

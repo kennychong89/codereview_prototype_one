@@ -1,0 +1,18 @@
+extends ./layout.jade
+
+block content
+	div(id='main')
+		div(class='container box')
+			!= messages()
+			h3 Sign into your account
+			form(role='form' method='post')
+				div(class='form-group')
+					label(for='inputEmail') E-mail 
+					input(type='email' class='form-control' name='email' id='inputEmail')
+				div(class='form-group')
+					label(for='inputPassword') Password
+					input(type='password' class='form-control' name='password' id='inputPassword')
+
+				p <a href='#'>Forgot your password?</a>
+
+				button(type='submit' class='btn btn-default') Sign In

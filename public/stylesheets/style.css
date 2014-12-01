@@ -1,0 +1,40 @@
+.box {
+	width: 25%;
+}
+
+.login {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #9D9D9D; 
+	display: block;
+}
+
+#login_name {
+	display: inline; 
+	color: #2A6496;
+}
+
+.logoff {
+	color: #FFF;
+}
+
+.summary {
+	background-color: #eee;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+#messages {
+	background-color: #eee;
+	list-style-type: none;
+	height: 600px;
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+}
+
+#messages li {
+	padding: 5px 10px;
+}
